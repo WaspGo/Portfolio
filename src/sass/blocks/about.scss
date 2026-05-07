@@ -1,0 +1,68 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.about {
+  padding-top: 120px;
+  &__wrapper {
+    display: grid;
+    padding-right: 100px;
+    grid: 0.4fr 1fr / 400px 1fr;
+    row-gap: 40px;
+    column-gap: 70px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+  &__subtitle {
+    position: relative;
+    @include before_circle;
+    margin: 6px 0 0 14px;
+  }
+  &__title {
+    position: relative;
+    margin-top: 6px;
+    @include divider;
+    &:before {
+      left: 0px;
+      bottom: -4px;
+      transform: none;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(116px, auto) 1fr;
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+  &__skill-text {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &__skill-group {
+    position: relative;
+    @include before_circle;
+    padding-left: 60px;
+    &::before {
+      left: 0px;
+      top: 0px;
+    }
+  }
+  &__skill-icon {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+}

@@ -1,0 +1,84 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.skills {
+  padding-top: 120px;
+  &_title {
+    position: relative;
+    text-align: center;
+    @include before_circle;
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &_subtitle {
+    position: relative;
+    text-align: center;
+    @include divider;
+  }
+  &__wrapper {
+    padding: 0 10px;
+    margin-top: 85px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 13px;
+  }
+  .skill__item {
+    padding: 30px 30px 25px 30px;
+    border: 1px solid #000;
+    img {
+      display: flex;
+      align-items: center;
+      min-height: 65px;
+    }
+    h3 {
+      margin-top: 20px;
+    }
+    &-text {
+      margin-top: 15px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &__progress {
+    &_wrapper {
+      margin-top: 120px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 30px 45px;
+    }
+    &__item {
+      h3 {
+        margin-left: 14px;
+        position: relative;
+        @include before_circle;
+        &:before {
+          left: -14px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &-line {
+        position: relative;
+        margin-top: 27px;
+        border-radius: 4px;
+        width: 350px;
+        height: 14px;
+        background: #e8e4de;
+      }
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__procent-completed {
+      position: absolute;
+      border-radius: 4px;
+      height: 14px;
+      background: $main-color;
+    }
+  }
+}

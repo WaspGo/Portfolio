@@ -1,0 +1,29 @@
+@use "/src/sass/base/variables" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+@mixin before_circle {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: $main-color;
+    border-radius: 100%;
+    left: -10px;
+    top: -6px;
+    z-index: -1;
+  }
+}
+
+@mixin divider {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: $main-color;
+    bottom: -25px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
