@@ -1,0 +1,45 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.portfolio {
+  padding-top: 120px;
+  &_title {
+    position: relative;
+    text-align: center;
+    @include before_circle;
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &_subtitle {
+    position: relative;
+    text-align: center;
+    @include divider;
+  }
+  &__wrapper {
+    margin-top: 85px;
+    display: grid;
+    padding: 0 2px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    grid-auto-rows: 280px;
+    gap: 5px;
+  }
+  &__item {
+    &:hover {
+      transform: scale(0.98);
+      filter: sepia(60%);
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &-mac {
+      grid-area: 2 / 2 / 3 / 4;
+    }
+    &-plans {
+      grid-area: 1 / 4 / 3 / 5;
+    }
+  }
+}

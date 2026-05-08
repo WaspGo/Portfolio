@@ -1,0 +1,18 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.price {
+  padding-top: 60px;
+  &_title {
+    text-align: center;
+    position: relative;
+    @include before_circle;
+    span {
+      @include divider;
+    }
+
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
