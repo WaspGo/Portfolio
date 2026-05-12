@@ -5,20 +5,10 @@
     text-transform: uppercase;
   }
   &__subtitle {
-    margin-top: 25px;
     text-transform: uppercase;
   }
   &__text {
     margin-top: 24px;
-  }
-  &__close-text {
-    position: fixed;
-    top: 60px;
-    right: 30px;
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transform: rotate(-90deg);
   }
   &__close-btn {
     position: fixed;
