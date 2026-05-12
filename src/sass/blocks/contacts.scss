@@ -2,6 +2,10 @@
 
 .contacts {
   padding: 120px 0 90px 0;
+  .just-validate-error-label {
+    margin-top: 5px;
+    font-size: 12px;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: 400px 585px;
@@ -66,8 +70,29 @@
       background-color: #ffffff;
       font-size: 12px;
       margin-bottom: 0;
-      top: -14px;
+      top: -15px;
       left: 12px;
+    }
+  }
+  &__triggers {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 35px;
+  }
+  &__policy {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    .just-validate-error-label {
+      bottom: -5px;
+      position: absolute;
+    }
+    input {
+      margin-right: 10px;
     }
   }
   &__input {
@@ -96,5 +121,9 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
+    cursor: pointer;
+    &:hover {
+      color: rgb(131, 36, 83);
+    }
   }
 }
