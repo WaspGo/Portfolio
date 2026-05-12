@@ -5,19 +5,26 @@ const hamburger = document.querySelector(".hamburger"),
   menu = document.querySelector(".menu"),
   closeElem = document.querySelector(".menu__close");
 
-hamburger.addEventListener("click", () => {
-  menu.classList.add("active");
-});
+// Перевіряємо, чи є гамбургер на цій сторінці
+if (hamburger && menu && closeElem) {
+  hamburger.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
 
-closeElem.addEventListener("click", () => {
-  menu.classList.remove("active");
-});
+  closeElem.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+}
 
 const counters = document.querySelectorAll(".skills__progress-procent"),
   lines = document.querySelectorAll(".skills__progress__procent-completed");
 
+// Тут помилки не буде, бо forEach просто не запуститься для порожнього списку,
+// але про всяк випадок перевіримо, чи є лінії для заповнення
 counters.forEach((item, i) => {
-  lines[i].style.width = item.innerHTML;
+  if (lines[i]) {
+    lines[i].style.width = item.innerHTML;
+  }
 });
 
 try {
