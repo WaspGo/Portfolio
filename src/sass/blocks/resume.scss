@@ -5,6 +5,7 @@
   padding-top: 120px;
   &__title {
     position: relative;
+    margin-top: 6px;
     @include before_circle;
     text-align: center;
     &:before {
@@ -21,7 +22,7 @@
   &__wrapper {
     display: grid;
     margin-top: 85px;
-    padding: 0 65px;
+    padding: 0 0 0 65px;
     grid-template-columns: repeat(2, 425px);
     column-gap: 135px;
   }

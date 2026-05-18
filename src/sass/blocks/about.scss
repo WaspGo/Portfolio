@@ -20,7 +20,7 @@
   &__subtitle {
     position: relative;
     @include before_circle;
-    margin: 6px 0 0 14px;
+    margin: 6px 0 0 10px;
   }
   &__title {
     position: relative;
@@ -41,7 +41,7 @@
 
   &__skills {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 260px);
     grid-template-rows: minmax(116px, auto) 1fr;
     column-gap: 50px;
     row-gap: 20px;

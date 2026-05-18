@@ -33,7 +33,7 @@
       display: grid;
       row-gap: 5px;
       grid-template-columns: repeat(2, auto);
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: repeat(2, minmax(21px, auto));
       grid-auto-rows: 1fr;
       justify-content: space-between;
       align-content: space-between;
