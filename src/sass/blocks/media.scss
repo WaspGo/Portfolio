@@ -308,4 +308,13 @@
       height: 143px;
     }
   }
+  .policy {
+    &__title {
+      line-height: 36px;
+      font-size: 24px;
+    }
+    &__close-btn {
+      position: absolute;
+    }
+  }
 }
